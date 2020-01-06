@@ -10,30 +10,229 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 	crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>SGP - Accueil</title>
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-	  <a class="navbar-brand" href="#"><img src="LogoFish.svg" height="40" width="40"></a>
-	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon"></span>
-	  </button>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#"><img src="LogoFish.svg" height="40" width="40"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-	<div class="collapse navbar-collapse" id="navbarSupportedContent">
-	    <ul class="navbar-nav mr-auto">
-	    	<li class="nav-item active">
-	        	<a class="nav-link" href="#">Collaborateurs <span class="sr-only">(current)</span></a>
-	      	</li>
-	       	<li class="nav-item">
-	        	<a class="nav-link" href="#">Statistiques</a>
-	      	</li>
-	        <li class="nav-item">
-	        	<a class="nav-link" href="#">Activités</a>
-	      	</li>
-	    </ul>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Collaborateurs <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Statistiques</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Activités</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	
+		<div class="row">
+			<div class="col align-self-start">
+				<div class="text-right">
+					<button class="btn btn-primary" id="btnAdd"><a href="creer.html">Ajouter un nouveau collaborateur</a></button>
+				</div>
+			</div>
+		</div>
+	
+	<div class="container-fluid" >	
+		<h2>Les Collaborateurs</h2>
+
+		<form>
+			<div class ="row">
+				<div class="form-group row">
+					<div class="col-4 offset-1">
+						<label class="control-label" for="search1">Rechercher un nom ou un prénom qui commence par :</label>
+					</div>
+				
+					<div class="col-3">
+						<input class="form-control" type="search" placeholder="Rechercher" aria-label="Rechercher" id="search1">
+					</div>
+					<div class="col-2">
+						<button class="btn my-2 my-sm-0" type="submit">Rechercher</button>
+					</div>
+				</div>
+				<div class ="form-group row">
+					<div class="col-2">
+						<div class="form-check">
+							<input type="checkbox" class="custom-control-input" id="customCheck1">
+							<label class="custom-control-label" for="customCheck1">Voir les collaborateurs désactivés</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class ="row">
+				<div class="col-4 offset-1">
+					<div class ="form-group row">
+						<label class="control-label" for="controlSelect1">Filtrer par département :</label>
+					</div>
+				</div>
+				<div class="col-2">
+					<div class="form-select">
+						<select class="form-control" id="controlSelect1">
+							<option>Tous</option>
+							<option>Comptabilité</option>
+							<option>Ressources Humaines</option>
+							<option>Informatique</option>
+							</select>
+					</div>
+				</div>
+
+			</div>
+			
+				
+		</form>
 	</div>
 
-	</nav>
+<div class="container-fluid">
+	<div class="row ">
+	 <div class="col-sm-4">
+	    <div class="card ">
+	    	<h5 class="card-header">NOM Prénom</h5>
+	     	<div class="card-body flex-row flex-wrap">
+	            <div class="media">
+    	            <img src="Profile.svg" class="align-self-start" height="80" width="80">
+ 	    		    <div class="media-body">
+	    	        	<ul class="card-text">
+			        		<li>Fonction : _ _ _ _ _ _ _ _ _</li>
+			                <li>Département : _ _ _ _ _ _ _ _ _</li>
+				    	    <li>Email : _ _ _ _ _ _ _ _ _</li>
+				    		<li>Téléphone : _ _ _ _ _ _</li>
+						</ul>
+					</div>
+ 				</div>
+		        <div class="btn-edit text-right">
+			       	<a href="#" class="btn btn-primary text-right">Edit</a>
+			    </div>
+	        </div>
+	    </div>
+	  </div>
+	
+	  
+	<div class="col-sm-4">
+	    <div class="card ">
+	    	<h5 class="card-header">NOM Prénom</h5>
+	     	<div class="card-body flex-row flex-wrap">
+	            <div class="media">
+    	            <img src="Profile.svg" class="align-self-start" height="80" width="80">
+ 	    		    <div class="media-body">
+	    	        	<ul class="card-text">
+			        		<li>Fonction : _ _ _ _ _ _ _ _ _</li>
+			                <li>Département : _ _ _ _ _ _ _ _ _</li>
+				    	    <li>Email : _ _ _ _ _ _ _ _ _</li>
+				    		<li>Téléphone : _ _ _ _ _ _</li>
+						</ul>
+					</div>
+ 				</div>
+		        <div class="btn-edit text-right">
+			       	<a href="#" class="btn btn-primary text-right">Edit</a>
+			    </div>
+	        </div>
+	    </div>
+	  </div>
+
+	<div class="col-sm-4">
+	    <div class="card ">
+	    	<h5 class="card-header">NOM Prénom</h5>
+	     	<div class="card-body flex-row flex-wrap">
+	            <div class="media">
+    	            <img src="Profile.svg" class="align-self-start" height="80" width="80">
+ 	    		    <div class="media-body">
+	    	        	<ul class="card-text">
+			        		<li>Fonction : _ _ _ _ _ _ _ _ _</li>
+			                <li>Département : _ _ _ _ _ _ _ _ _</li>
+				    	    <li>Email : _ _ _ _ _ _ _ _ _</li>
+				    		<li>Téléphone : _ _ _ _ _ _</li>
+						</ul>
+					</div>
+ 				</div>
+		        <div class="btn-edit text-right">
+			       	<a href="#" class="btn btn-primary text-right">Edit</a>
+			    </div>
+	        </div>
+	    </div>
+	  </div>
+	</div>
+		<div class="row ">
+	 <div class="col-sm-4">
+	    <div class="card ">
+	    	<h5 class="card-header">NOM Prénom</h5>
+	     	<div class="card-body flex-row flex-wrap">
+	            <div class="media">
+    	            <img src="Profile.svg" class="align-self-start" height="80" width="80">
+ 	    		    <div class="media-body">
+	    	        	<ul class="card-text">
+			        		<li>Fonction : _ _ _ _ _ _ _ _ _</li>
+			                <li>Département : _ _ _ _ _ _ _ _ _</li>
+				    	    <li>Email : _ _ _ _ _ _ _ _ _</li>
+				    		<li>Téléphone : _ _ _ _ _ _</li>
+						</ul>
+					</div>
+ 				</div>
+		        <div class="btn-edit text-right">
+			       	<a href="#" class="btn btn-primary text-right">Edit</a>
+			    </div>
+	        </div>
+	    </div>
+	  </div>
+	
+	  
+	<div class="col-sm-4">
+	    <div class="card ">
+	    	<h5 class="card-header">NOM Prénom</h5>
+	     	<div class="card-body flex-row flex-wrap">
+	            <div class="media">
+    	            <img src="Profile.svg" class="align-self-start" height="80" width="80">
+ 	    		    <div class="media-body">
+	    	        	<ul class="card-text">
+			        		<li>Fonction : _ _ _ _ _ _ _ _ _</li>
+			                <li>Département : _ _ _ _ _ _ _ _ _</li>
+				    	    <li>Email : _ _ _ _ _ _ _ _ _</li>
+				    		<li>Téléphone : _ _ _ _ _ _</li>
+						</ul>
+					</div>
+ 				</div>
+		        <div class="btn-edit text-right">
+			       	<a href="#" class="btn btn-primary text-right">Edit</a>
+			    </div>
+	        </div>
+	    </div>
+	  </div>
+
+	<div class="col-sm-4">
+	    <div class="card ">
+	    	<h5 class="card-header">NOM Prénom</h5>
+	     	<div class="card-body flex-row flex-wrap">
+	            <div class="media">
+    	            <img src="Profile.svg" class="align-self-start" height="80" width="80">
+ 	    		    <div class="media-body">
+	    	        	<ul class="card-text">
+			        		<li>Fonction : _ _ _ _ _ _ _ _ _</li>
+			                <li>Département : _ _ _ _ _ _ _ _ _</li>
+				    	    <li>Email : _ _ _ _ _ _ _ _ _</li>
+				    		<li>Téléphone : _ _ _ _ _ _</li>
+						</ul>
+					</div>
+ 				</div>
+		        <div class="btn-edit text-right">
+			       	<a href="#" class="btn btn-primary text-right">Edit</a>
+			    </div>
+	        </div>
+	    </div>
+	  </div>
+	</div>
+</div>
+
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-

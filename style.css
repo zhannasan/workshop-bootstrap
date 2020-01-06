@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+.input{
+	width: 100%;
+}
+.col-sm-4{
+	padding: 0.4rem;
+}
+.card-text{
+	list-style-type: none;
+}
+.img-fluid{
+	padding: 4px;
+}
+.btn, #btnAdd{
+	background-color: #103c54;
+	color: #ffffff;
+	border: none;
+}
+.btn :hover, :active{
+	text-decoration: none;
+	background-color: #006a9b;
+	
+}
