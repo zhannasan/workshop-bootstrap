@@ -9,7 +9,7 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
 	crossorigin="anonymous">
-
+    <link rel="stylesheet" type="text/css" href="style.css">
 	<title>SGP - Accueil</title>
 </head>
 <body>
@@ -38,27 +38,35 @@
 
 <div class=container-fluid>
     <div class="row mt-3">
-        <div class="col-12 col-lg-3 col-md-4 col-sm-4 col-xs-12 offset-1">
-            <img src="Profile.svg" alt="Profile picture" height="250" width="250">
+        <div class="col align-self-start mr-3">
+			<div class="text-right">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="defaultUnchecked">
+                    <label class="custom-control-label" for="defaultUnchecked">Désactiver</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-1">
+        <div class="col-12 col-lg-3 col-md-4 col-sm-4 col-xs-12 offset-1 mt-5">
+            <img src="Profile.svg" alt="Profile picture" height="220" width="220">
         </div>
         <!--Form-->
         <div class="col-12 col-lg-7 col-md-12 col-sm-12 col-xs-12">
-	        <h1>Nouveau Collaborateur</h1>
-	    <form name="editerCollabForm" action="/editer" method="post">
+	        <h1>NOM Prenom - matricule</h1>
+          <form>           
             <div class="accordion" id="accordionEdit">
-                <div class="card z-depth-0 bordered">
+                <div class="card">
                   <div class="card-header" id="headingOne">
-                    <h4 class="mb-0">
-                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
-                        aria-expanded="true" aria-controls="collapseOne">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         Identité
                       </button>
-                    </h4>
+                    </h2>
                   </div>
-                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                    data-parent="#accordionExample">
+              
+                  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionEdit">
                     <div class="card-body">
-                        <!--Body1-->
                         <div class ="row">
                             <div class="col-3 col-xs-10 offset-1 text-right">                           
                                 <label class="control-label " for="controlSelect1">Civilité</label>
@@ -93,7 +101,7 @@
                                 <label class="control-label" for="formCtrlDate">Date de naissance</label>
                             </div>
                             <div class="col-5">
-                                <input type="text" class="form-control" name="dateNassance" id="formCtrlDate">
+                                <input type="date" class="form-control" name="dateNassance" id="formCtrlDate">
                             </div>
                         </div>
                         <div class ="row mt-3">
@@ -101,7 +109,7 @@
                                 <label class="control-label" for="formCtrlAddresse">Adresse</label>
                             </div>
                             <div class="col-5">
-                                <textarea type="text" class="form-control" name="adresse" id="formCtrlAddresse"></textarea>
+                                <textarea type="text" class="form-control" name="adresse" id="formCtrlAddresse" maxlength="400"></textarea>
                             </div>
                         </div>
                         <div class ="row mt-3">
@@ -109,71 +117,98 @@
                                 <label class="control-label" for="formCtrlNSS">Numéro de sécurité sociale</label>
                             </div>
                             <div class="col-5">
-                                <input type="text" class="form-control" name="numeroSecu" id="formCtrlNSS">
+                                <input type="text" class="form-control" name="numeroSecu" id="formCtrlNSS" pattern="[0-9]{15}">
                             </div>
                         </div>
                         <div class ="row mt-3">
                             <div class="col-3 offset-1 text-right">
-                                <label class="control-label" for="formCtrlNSS">Téléphone</label>
+                                <label class="control-label" for="formCtrlTel">Téléphone</label>
                             </div>
                             <div class="col-5">
-                                <input type="text" class="form-control" name="numeroSecu" id="formCtrlNSS">
+                                <input type="text" class="form-control" name="telephone" id="formCtrltel">
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!--Card 2-->
+                <div class="card">
+                  <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Poste
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionEdit">
+                    <div class="card-body">
+                        <div class ="row mt-3">
+                            <div class="col-3 offset-1 text-right">
+                                <label class="control-label" for="formCtrlDept">Departement</label>
+                            </div>
+                            <div class="col-5">
+                                <input type="text" class="form-control" name="departement" id="formCtrlDept">
+                            </div>
+                        </div>
+                        <div class ="row mt-3">
+                            <div class="col-3 offset-1 text-right">
+                                <label class="control-label" for="formCtrlNomPoste">Nom</label>
+                            </div>
+                            <div class="col-5">
+                                <input type="text" class="form-control" name="nomPoste" id="formCtrlNomPoste">
                             </div>
                         </div>
                     </div>
                   </div>
                 </div>
-                <div class="card z-depth-0 bordered">
-                  <div class="card-header" id="headingTwo">
-                    <h5 class="mb-0">
-                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Poste
-                      </button>
-                    </h5>
-                  </div>
-                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                    <div class="card-body">
-                  
+                <!--Card 3-->
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                     <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Coordonnéees banquaires</button>
+                     </h2>
                     </div>
-                  </div>
-                </div>
-                <div class="card z-depth-0 bordered">
-                  <div class="card-header" id="headingThree">
-                    <h5 class="mb-0">
-                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Coordonnées Banquaires
-                      </button>
-                    </h5>
-                  </div>
-                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                    <div class="card-body">
-                     
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionEdit">
+                        <div class="card-body">
+                            <div class ="row mt-3">
+                                <div class="col-3 offset-1 text-right">
+                                    <label class="control-label" for="formCtrlIban">IBAN</label>
+                                </div>
+                                <div class="col-5">
+                                    <input type="text" class="form-control" name="iban" id="formCtrlIban">
+                                </div>
+                            </div>
+                            <div class ="row mt-3">
+                                <div class="col-3 offset-1 text-right">
+                                    <label class="control-label" for="formCtrlBic">BIC</label>
+                                </div>
+                                <div class="col-5">
+                                    <input type="text" class="form-control" name="bic" id="formCtrlBic">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-            
-            
-		<div class="row mt-3">
-			<div class="col-5 offset-4">
-			<button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#confirmModal" id="btnCreer">Créeer</button>
-			</div>
-		</div>
-    </form>
-
-
-	</form>
+            </div>
+                <!--Button-->
+                <div class="row mt-3">
+                    <div class="col-5 offset-7">
+                        <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#confirmModal" id="btnSave">Sauvegarder</button>
+                    </div>
+                </div>
+            </form>
+    </div>
 </div>
+
 <!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-	integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-	crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-	crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
 	<script
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"

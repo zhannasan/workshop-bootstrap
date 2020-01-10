@@ -5,28 +5,28 @@
 .input{
 	width: 100%;
 }
-.col-sm-4{
-	padding: 0.4rem;
-}
 .card-text{
 	list-style-type: none;
 }
 .img-fluid{
 	padding: 4px;
 }
-.btn, #btnAdd{
+.btn{
 	background-color: #103c54;
-	color: #ffffff;
 	border: none;
+	color: #ffffff;
+}
+.mt-3 .col .align-self-start .mr-3 .text-right .btn .btn-link .a :link, :active{
+	color: #ffffff;
+	text-decoration: none;
 }
 .btn :hover, :active{
 	text-decoration: none;
 	background-color: #006a9b;
-	
-}
-.h1{
-	margin: 5px;
 }
 .textarea, #formCtrlAddresse{
 	resize: none;
+}
+.mb-0 .btn btn-link{
+	background-color: none;
 }
