@@ -27,10 +27,10 @@
 						<a class="nav-link" href="index.html">Collaborateurs <span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Statistiques</a>
+						<a class="nav-link" href="stats.html">Statistiques</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Activités</a>
+						<a class="nav-link" href="activites.html">Activités</a>
 					</li>
 				</ul>
 			</div>
@@ -66,7 +66,7 @@
 				<label class="control-label" for="formCtrlDate">Date de naissance</label>
 			</div>
 			<div class="col-5">
-                <input type="text" class="form-control is invalid" name="dateNassance" id="formCtrlDate" required>
+                <input type="date" class="form-control is invalid" name="dateNassance" id="formCtrlDate" required>
                 <small class="form-text text-danger">La date de naissance est obligatoire</small>
 			</div>
         </div>
@@ -85,7 +85,7 @@
 				<label class="control-label" for="formCtrlNSS">Numéro de sécurité sociale</label>
 			</div>
 			<div class="col-5">
-                <input type="text" class="form-control is invalid" name="numeroSecu" id="formCtrlNSS" required>
+                <input type="text" class="form-control is invalid" name="numeroSecu" id="formCtrlNSS" required pattern="[0-9]{15}">
                 <small class="form-text text-danger">Le numéro de sécurité sociale est obligatoire</small>
 			</div>
 		</div>

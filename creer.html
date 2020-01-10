@@ -27,10 +27,10 @@
 						<a class="nav-link" href="index.html">Collaborateurs <span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Statistiques</a>
+						<a class="nav-link" href="stats.html">Statistiques</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Activités</a>
+						<a class="nav-link" href="activites.html">Activités</a>
 					</li>
 				</ul>
 			</div>
@@ -39,7 +39,7 @@
 
 <div class=container-fluid>
 	<h1>Nouveau Collaborateur</h1>
-	<div name="creerCollabForm" action="/nouveau" method="post">
+	<form name="creerCollabForm" action="/creer" method="post">
 		<div class ="row mt-3">
 			<div class="col-3 offset-1">
 				<label class="control-label" for="formCtrlNom">Nom</label>
@@ -61,7 +61,7 @@
 				<label class="control-label" for="formCtrlDate">Date de naissance</label>
 			</div>
 			<div class="col-5">
-				<input type="text" class="form-control" name="dateNassance" id="formCtrlDate">
+				<input type="date" class="form-control" name="dateNassance" id="formCtrlDate">
 			</div>
 		</div>
 		<div class ="row mt-3">
@@ -77,7 +77,7 @@
 				<label class="control-label" for="formCtrlNSS">Numéro de sécurité sociale</label>
 			</div>
 			<div class="col-5">
-				<input type="text" class="form-control" name="numeroSecu" id="formCtrlNSS">
+				<input type="text" class="form-control" name="numeroSecu" id="formCtrlNSS" required pattern="[0-9]{15}">
 			</div>
 		</div>
 		<div class="row mt-3">
