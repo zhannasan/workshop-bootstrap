@@ -24,3 +24,9 @@
 	background-color: #006a9b;
 	
 }
+.h1{
+	margin: 5px;
+}
+.textarea, #formCtrlAddresse{
+	resize: none;
+}
