@@ -35,63 +35,76 @@
 				</ul>
 			</div>
 		</nav>
-</header>
+	</header>
 
 <div class=container-fluid>
 	<h1>Nouveau Collaborateur</h1>
-	<div name="creerCollabForm" action="/nouveau" method="post">
-		<div class ="row mt-3">
+	<form name="creerErrorCollabForm" method="post">
+        
+        <div class ="row mt-3">
 			<div class="col-3 offset-1">
 				<label class="control-label" for="formCtrlNom">Nom</label>
 			</div>
 			<div class="col-5">
-				<input type="text" class="form-control" name="nom" id="formCtrlNom">
-			</div>
-		</div>
+                <input type="text" class="form-control is invalid" name="nom" id="formCtrlNom" required>
+                <small class="form-text text-danger">Le nom est obligatoire</small>
+            </div>
+        </div>
+        
 		<div class ="row mt-3">
 			<div class="col-3 offset-1">
 				<label class="control-label" for="formCtrlPrenom">Prénom</label>
 			</div>
 			<div class="col-5">
-				<input type="text" class="form-control" name="prenom" id="formCtrlPrenom">
+                <input type="text" class="form-control is invalid" name="prenom" id="formCtrlPrenom" required>
+                <small class="form-text text-danger">Le prénom est obligatoire</small>
 			</div>
 		</div>
+
 		<div class ="row mt-3">
 			<div class="col-3 offset-1">
 				<label class="control-label" for="formCtrlDate">Date de naissance</label>
 			</div>
 			<div class="col-5">
-				<input type="text" class="form-control" name="dateNassance" id="formCtrlDate">
+                <input type="text" class="form-control is invalid" name="dateNassance" id="formCtrlDate" required>
+                <small class="form-text text-danger">La date de naissance est obligatoire</small>
 			</div>
-		</div>
+        </div>
+        
 		<div class ="row mt-3">
 			<div class="col-3 offset-1">
 				<label class="control-label" for="formCtrlAddresse">Adresse</label>
 			</div>
 			<div class="col-5">
-				<textarea type="text" class="form-control" name="adresse" id="formCtrlAddresse"></textarea>
-			</div>
+				<textarea type="text" class="form-control is invalid" name="adresse" id="formCtrlAddresse"></textarea>
+                <small class="form-text text-danger">L'adresse est obligatoire</small>
+            </div>
 		</div>
 		<div class ="row mt-3">
 			<div class="col-3 offset-1">
 				<label class="control-label" for="formCtrlNSS">Numéro de sécurité sociale</label>
 			</div>
 			<div class="col-5">
-				<input type="text" class="form-control" name="numeroSecu" id="formCtrlNSS">
+                <input type="text" class="form-control is invalid" name="numeroSecu" id="formCtrlNSS" required>
+                <small class="form-text text-danger">Le numéro de sécurité sociale est obligatoire</small>
 			</div>
 		</div>
 		<div class="row mt-3">
 			<div class="col-5 offset-4">
-			<button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#confirmModal" id="btnCreer">Créeer</button>
-			</div>
-		</div>
+			    <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#confirmModal" id="btnCreer">Créeer</button>
+            </div>
+        </div>
 
 		<!-- Modal -->
 		<div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
 		  <div class="modal-dialog" role="document">
 		    <div class="modal-content">
+
 		      <div class="modal-header">
 		        <h5 class="modal-title" id="exampleModalLabel">Vous êtes sur le point de créer un nouveau collaborateur</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
 		      </div>
 		      <div class="modal-body">
 		      	<div class="col-auto">
@@ -107,11 +120,11 @@
 		        <button type="reset" class="btn btn-secondary" data-dismiss="modal" value="reset">Annuler</button>
 		        <button type="submit" class="btn btn-secondary" data-dismiss="modal"name="save" value="submit">Confirmer</button>
 		      </div>
-		    	</div>
-		  	  </div>
-		</div>
-
-	</form>
+		    </div>
+		  </div>
+        </div>
+        
+    </form>
 </div>
 <!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
