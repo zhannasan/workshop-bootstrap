@@ -11,22 +11,17 @@
 .img-fluid{
 	padding: 4px;
 }
-.btn{
+.btn {
 	background-color: #103c54;
 	border: none;
 	color: #ffffff;
-}
-.mt-3 .col .align-self-start .mr-3 .text-right .btn .btn-link .a :link, :active{
-	color: #ffffff;
 	text-decoration: none;
-}
-.btn :hover, :active{
-	text-decoration: none;
-	background-color: #006a9b;
+	text-decoration-line: none;
 }
 .textarea, #formCtrlAddresse{
 	resize: none;
 }
-.mb-0 .btn btn-link{
-	background-color: none;
+#accordeonBtn :active, :hover, :focus {
+	text-decoration: none;
+	text-decoration-line: none;
 }
